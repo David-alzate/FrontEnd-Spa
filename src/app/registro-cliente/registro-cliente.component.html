@@ -1,7 +1,7 @@
 <h1 class="text-center title">Registrar Cliente</h1>
 
 <div class="container">
-<form>
+  <form [formGroup]="clienteForm" (ngSubmit)="guardarCliente()">
     <div class="form-group">
       <label for="formGroupExampleInput">Nombre</label>
       <input type="text" class="form-control" formControlName = "nombre" placeholder="Ingrese el nombre ">
