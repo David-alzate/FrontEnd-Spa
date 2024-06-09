@@ -18,6 +18,23 @@ form button {
     margin-bottom: 5%;
 }
 
+form label {
+    font-size: 17px;
+    font-weight: bold;  
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
 form button:hover {
     background-color: #CCCCCC;
     color: black;

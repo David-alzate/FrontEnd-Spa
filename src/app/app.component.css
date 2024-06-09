@@ -3,11 +3,28 @@
     font-weight: bold;
 }
 
-a {
+.nav-cliente {
     text-decoration: none;
     color: black;
     font-size: 20px;
     font-weight: bold;
+}
+
+.nav-cliente:hover {
+    background-color: black;
+    color: white;
+}
+
+.nav-login {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-login:hover {
+    background-color: black;
+    color: white;
 }
 
 nav {

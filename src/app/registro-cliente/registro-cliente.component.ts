@@ -12,9 +12,9 @@ import { TipoIdentificacionService } from '../services/tipoIdentificacion/tipo-i
 export class RegistroClienteComponent implements OnInit {
 
   clienteForm: FormGroup;
-  genero: any;
-  tipoIdentificacion: any;
-  cliente: any;
+  generos: any;
+  tipoIdentificaciones: any;
+  clientes: any[] = [];
 
   constructor(
     public fb: FormBuilder,
@@ -37,6 +37,18 @@ export class RegistroClienteComponent implements OnInit {
 
 ngOnInit(): void {
 
+  this.generoService.getAllGeneros().subscribe(resp => {
+    this.generos = resp.datos
+  },
+    error => { console.error(error) }
+  );
+
+  this.tipoIdentificacionService.getAllTipoIdentificaciones().subscribe(resp => {
+    this.tipoIdentificaciones = resp.datos
+  },
+    error => { console.error(error) }
+  );
+
 }
 
 
@@ -45,7 +57,7 @@ guardarCliente(): void {
     resp => {
       alert(resp.mensajes[0]);
       this.clienteForm.reset();
-      this.cliente.push(resp);
+      this.clientes.push(resp);
       console.log(resp);
     },
     error => {
